@@ -6,15 +6,11 @@ const fsLabel = document.getElementById("fullscreenlabel");
 fullScreenBtn.addEventListener("click", (event) => {
   if (fullScreenBtn.checked) {
     main.style.width = "100vw";
-    main.style.justifyContent = "space-evenly";
     main2.style.width = "100vw";
-    main2.style.justifyContent = "space-evenly";
     fsLabel.textContent = "No, take me back!";
   } else {
     main.style.width = "50vw";
-    main.style.justifyContent = "center";
     main2.style.width = "50vw";
-    main2.style.justifyContent = "center";
     fsLabel.textContent = "Full Screen Me!";
   }
 });
