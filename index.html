@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>week 4, task 4</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
   </head>
-  <body>
-    <section class="main">
+  <body class="body">
+    <!-- Making this layout was very easy. I used emmet abbreviation and typed "section.main*2>.container*3>img+h3+p+a:blank" and VS code made all of it for me. -->
+    <section class="main" id="main">
       <div class="container">
         <img
           src="https://picsum.photos/200"
@@ -19,10 +21,12 @@
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
           reiciendis nemo iste quisquam molestiae itaque, inventore quae! Iusto,
-          aut veniam.<a href="http://" target="_blank" rel="noopener noreferrer"
-            >Hooboy, a button!</a
-          >
+          aut veniam.
         </p>
+        <label class="btn" id="fullscreenlabel" for="fullScreen"
+          >Full Screen Me!</label
+        >
+        <input type="checkbox" name="checkbox" id="fullScreen" />
       </div>
       <div class="container">
         <img
@@ -35,10 +39,12 @@
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
           reiciendis nemo iste quisquam molestiae itaque, inventore quae! Iusto,
-          aut veniam.<a href="http://" target="_blank" rel="noopener noreferrer"
-            >Hooboy, a button!</a
-          >
+          aut veniam.
         </p>
+        <label for="modeswitch" class="btn" id="modeswitchlabel"
+          >Wrap Me!</label
+        >
+        <input type="checkbox" name="wrapmode" id="modeswitch" />
       </div>
       <div class="container">
         <img
@@ -51,13 +57,15 @@
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
           reiciendis nemo iste quisquam molestiae itaque, inventore quae! Iusto,
-          aut veniam.<a href="http://" target="_blank" rel="noopener noreferrer"
-            >Hooboy, a button!</a
-          >
+          aut veniam.
         </p>
+        <label for="borderbtn" class="btn" id="borderbtnlabel"
+          >Border Me!</label
+        >
+        <input type="checkbox" name="borderbtn" id="borderbtn" />
       </div>
     </section>
-    <section class="main">
+    <section class="main" id="main2">
       <div class="container">
         <img
           src="https://picsum.photos/200"
@@ -69,10 +77,11 @@
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
           reiciendis nemo iste quisquam molestiae itaque, inventore quae! Iusto,
-          aut veniam.<a href="http://" target="_blank" rel="noopener noreferrer"
-            >Hooboy, a button!</a
-          >
+          aut veniam.
         </p>
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          >Hooboy, a button!</a
+        >
       </div>
       <div class="container">
         <img
@@ -85,10 +94,11 @@
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
           reiciendis nemo iste quisquam molestiae itaque, inventore quae! Iusto,
-          aut veniam.<a href="http://" target="_blank" rel="noopener noreferrer"
-            >Hooboy, a button!</a
-          >
+          aut veniam.
         </p>
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          >Hooboy, a button!</a
+        >
       </div>
       <div class="container">
         <img
@@ -101,10 +111,11 @@
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
           reiciendis nemo iste quisquam molestiae itaque, inventore quae! Iusto,
-          aut veniam.<a href="http://" target="_blank" rel="noopener noreferrer"
-            >Hooboy, a button!</a
-          >
+          aut veniam.
         </p>
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          >Hooboy, a button!</a
+        >
       </div>
     </section>
   </body>
