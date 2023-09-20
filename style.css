@@ -13,7 +13,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: var(--bgcolor);
-  color: var(--text-color);
+  transition: 0.5s;
 }
 
 .main {
@@ -23,7 +23,7 @@ body {
   padding: 0.5em;
   gap: 1em;
   width: 50vw;
-  transition: 1s;
+  transition: 0.5s;
 }
 .container {
   display: flex;
@@ -31,9 +31,11 @@ body {
   justify-content: center;
   flex-basis: 15%;
   padding: 1em;
+  color: var(--text-color);
   box-shadow: 0.2em 0.2em 0.3em 0.3em var(--shadow-color);
   align-items: center;
   background: var(--con-bg-color);
+  transition: 0.5s;
 }
 .colorbtncontainer {
   transform: translate(60vw, -90vh);
@@ -48,7 +50,7 @@ body {
   border-radius: 1em;
   box-shadow: 0.2em 0.2em 0.3em 0.3em #000814;
   background: #e0e1dd;
-  transition: 1s;
+  transition: 0.5s;
 }
 .colorbtncontainer:hover,
 .colorbtncontainer:focus {
