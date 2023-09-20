@@ -72,13 +72,15 @@ allRdmBtn.addEventListener("click", AllRandom);
 menuBtn.addEventListener("click", (event) => {
   if (menuBtn.checked) {
     btnContainer.style.display = "flex";
+    btnContainer.style.opacity = "1";
     menuLabel.style.gap = "0";
 
-    path1.style.transform = "rotate(45deg)";
+    path1.style.transform = "rotate(45deg) translate(1px, 3px)";
 
-    path2.style.transform = "rotate(-45deg)";
+    path2.style.transform = "rotate(-45deg) translate(-1px, -3px)";
   } else {
     btnContainer.style.display = "none";
+    btnContainer.style.opacity = "0";
     menuLabel.style.gap = "20px";
 
     path1.style.transform = "rotate(0deg)";
