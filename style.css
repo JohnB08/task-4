@@ -14,12 +14,14 @@ body {
   box-sizing: border-box;
   background: var(--bgcolor);
   transition: 0.5s;
+  position: relative;
 }
 
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0.5em;
   gap: 1em;
   width: 50vw;
@@ -31,19 +33,23 @@ body {
   justify-content: center;
   flex-basis: 15%;
   padding: 1em;
+  flex-grow: 1;
   color: var(--text-color);
   box-shadow: 0.2em 0.2em 0.3em 0.3em var(--shadow-color);
   align-items: center;
   background: var(--con-bg-color);
   transition: 0.5s;
 }
-.colorbtncontainer {
-  transform: translate(60vw, -90vh);
+#btnCont {
   color: #0d1b2a;
   display: flex;
+  position: fixed;
+  top: 25%;
+  right: 20%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: nowrap;
   gap: 1em;
   width: 15%;
   padding: 1em;
@@ -52,10 +58,6 @@ body {
   background: #e0e1dd;
   transition: 0.5s;
 }
-.colorbtncontainer:hover,
-.colorbtncontainer:focus {
-  width: 20%;
-}
 /* Buttons */
 input {
   display: none;
@@ -63,7 +65,6 @@ input {
 .btn,
 .container a {
   display: inline-block;
-
   background-color: var(--btn-bg-color);
   text-decoration: none;
   color: var(--btn-text-color);
@@ -71,6 +72,40 @@ input {
   transition: 0.5s;
   border-radius: 0.5em;
   border: none;
+}
+#menubtn {
+  position: fixed;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  top: 5%;
+  right: 10%;
+  border-right: 0.4em solid #0d1b2a;
+  border-bottom: 0.4em solid #0d1b2a;
+  background: #e0e1dd;
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  transition: 0.5s;
+}
+#menubtn:hover,
+#menubtn:focus {
+  transform: translate(0.1em, 0.1em);
+  border-right: 0.3em solid #0d1b2a;
+  border-bottom: 0.3em solid #0d1b2a;
+}
+#menubtn:active {
+  transform: translate(0.3em, 0.3em);
+  border-right: 0.1em solid #0d1b2a;
+  border-bottom: 0.1em solid #0d1b2a;
+}
+#path1,
+#path2 {
+  margin: 0;
+  transition: 1s;
 }
 /* I needed one container to be constant so it's allways visible (unless you fullscreen the sections) */
 .btnconst {
@@ -85,6 +120,9 @@ input {
   transition: 0.5s;
   border-radius: 0.5em;
   border: none;
+}
+#fsplaceholderbtn {
+  display: none;
 }
 /* hover effects. */
 .btnconst:hover {
@@ -121,4 +159,28 @@ input {
   padding-bottom: 0.1em;
   padding-left: 1.5em;
   padding-top: 0.9em;
+}
+
+@media only screen and (max-width: 1600px) {
+  .main {
+    width: 100vw;
+  }
+  #fullscreenlabel {
+    display: none;
+  }
+  #fsplaceholderbtn {
+    display: inline-block;
+  }
+  #btnCont {
+    display: none;
+    top: 10%;
+    right: 5%;
+    width: 90vw;
+  }
+  .btnconst {
+    width: 70vw;
+  }
+  #menubtn {
+    display: flex;
+  }
 }

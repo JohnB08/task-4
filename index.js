@@ -1,26 +1,27 @@
 //fetching all the things I need to manipulate the page
 const root = document.documentElement;
 const main1 = document.getElementById("main");
-const main2 = document.getElementById("main2");
 const btnContainer = document.getElementById("btnCont");
 const fsSwitch = document.getElementById("fullScreen");
 const fsLabel = document.getElementById("fullscreenlabel");
+const menuBtn = document.getElementById("menucheck");
+const menuLabel = document.getElementById("menubtn");
 const bgBtn = document.getElementById("bgbtn");
 const textBtn = document.getElementById("textbtn");
 const conBgBtn = document.getElementById("conbgbtn");
 const btnBgBtn = document.getElementById("btnbgbtn");
 const btnTextBtn = document.getElementById("btntextbtn");
 const allRdmBtn = document.getElementById("allrdmbtn");
+const path1 = document.getElementById("path1");
+const path2 = document.getElementById("path2");
 //Making the button that makes the two parent containers fullscreen.
 fsSwitch.addEventListener("click", (event) => {
   if (fsSwitch.checked) {
     main1.style.width = "100vw";
-    main2.style.width = "100vw";
     fsLabel.textContent = "No, shrink me!";
     btnContainer.style.transform = "translate(42vw, 10vh)";
   } else {
     main1.style.width = "50vw";
-    main2.style.width = "50vw";
     fsLabel.textContent = "Fullscreen Me!";
     btnContainer.style.transform = "translate(60vw, -90vh)";
   }
@@ -67,3 +68,21 @@ conBgBtn.addEventListener("click", containerColor);
 btnBgBtn.addEventListener("click", buttonColor);
 btnTextBtn.addEventListener("click", buttonTextColor);
 allRdmBtn.addEventListener("click", AllRandom);
+
+menuBtn.addEventListener("click", (event) => {
+  if (menuBtn.checked) {
+    btnContainer.style.display = "flex";
+    menuLabel.style.gap = "0";
+
+    path1.style.transform = "rotate(45deg)";
+
+    path2.style.transform = "rotate(-45deg)";
+  } else {
+    btnContainer.style.display = "none";
+    menuLabel.style.gap = "20px";
+
+    path1.style.transform = "rotate(0deg)";
+
+    path2.style.transform = "rotate(0deg)";
+  }
+});
