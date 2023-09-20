@@ -38,18 +38,23 @@ body {
   background: var(--con-bg-color);
 }
 .colorbtncontainer {
-  transform: translate(60vw, -70vh);
+  transform: translate(60vw, -90vh);
   color: #0d1b2a;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 1em;
   border: 0.5em solid black;
   width: 15%;
   padding: 1em;
   box-shadow: 0.1em 0.1em 0.3em 0.3em #000814;
   background: #e0e1dd;
+  transition: 1s;
+}
+.colorbtncontainer:hover,
+.colorbtncontainer:focus {
+  width: 20%;
 }
 /* Buttons */
 input {
@@ -75,6 +80,8 @@ input {
   color: #e0e1dd;
   width: 80%;
   padding: 0.5em 1em;
+  font-size: 1.2em;
+  font-weight: bold;
   transition: 0.5s;
   border-radius: 0.5em;
   border: none;

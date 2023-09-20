@@ -17,12 +17,12 @@ fsSwitch.addEventListener("click", (event) => {
     main1.style.width = "100vw";
     main2.style.width = "100vw";
     fsLabel.textContent = "No, shrink me!";
-    btnContainer.style.display = "none";
+    btnContainer.style.transform = "translate(42vw, 10vh)";
   } else {
     main1.style.width = "50vw";
     main2.style.width = "50vw";
     fsLabel.textContent = "Fullscreen Me!";
-    btnContainer.style.display = "flex";
+    btnContainer.style.transform = "translate(60vw, -90vh)";
   }
 });
 //hexcode generator
