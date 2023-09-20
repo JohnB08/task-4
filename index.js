@@ -1,42 +1,69 @@
-const fullScreenBtn = document.getElementById("fullScreen");
-
-const main = document.getElementById("main");
+//fetching all the things I need to manipulate the page
+const root = document.documentElement;
+const main1 = document.getElementById("main");
 const main2 = document.getElementById("main2");
+const btnContainer = document.getElementById("btnCont");
+const fsSwitch = document.getElementById("fullScreen");
 const fsLabel = document.getElementById("fullscreenlabel");
-fullScreenBtn.addEventListener("click", (event) => {
-  if (fullScreenBtn.checked) {
-    main.style.width = "100vw";
+const bgBtn = document.getElementById("bgbtn");
+const textBtn = document.getElementById("textbtn");
+const conBgBtn = document.getElementById("conbgbtn");
+const btnBgBtn = document.getElementById("btnbgbtn");
+const btnTextBtn = document.getElementById("btntextbtn");
+const allRdmBtn = document.getElementById("allrdmbtn");
+//Making the button that makes the two parent containers fullscreen.
+fsSwitch.addEventListener("click", (event) => {
+  if (fsSwitch.checked) {
+    main1.style.width = "100vw";
     main2.style.width = "100vw";
-    fsLabel.textContent = "No, take me back!";
+    fsLabel.textContent = "No, shrink me!";
+    btnContainer.style.display = "none";
   } else {
-    main.style.width = "50vw";
+    main1.style.width = "50vw";
     main2.style.width = "50vw";
-    fsLabel.textContent = "Full Screen Me!";
+    fsLabel.textContent = "Fullscreen Me!";
+    btnContainer.style.display = "flex";
   }
 });
-const modeSwitch = document.getElementById("modeswitch");
-const msLabel = document.getElementById("modeswitchlabel");
-modeSwitch.addEventListener("click", (event) => {
-  if (modeSwitch.checked) {
-    main.style.flexWrap = "wrap";
-    main2.style.flexWrap = "wrap";
-    msLabel.textContent = "Too much wrappage!";
-  } else {
-    main.style.flexWrap = "nowrap";
-    main2.style.flexWrap = "nowrap";
-    msLabel.textContent = "Wrap Me! ";
-  }
-});
-const borderBtn = document.getElementById("borderbtn");
-const bLabel = document.getElementById("borderbtnlabel");
-borderBtn.addEventListener("click", (event) => {
-  if (borderBtn.checked) {
-    main.style.border = "1em solid #E0E1DD";
-    main2.style.border = "1em solid #E0E1DD";
-    bLabel.textContent = "No Borders!";
-  } else {
-    main.style.border = "none";
-    main2.style.border = "none";
-    bLabel.textContent = "Border Me!";
-  }
-});
+//hexcode generator
+function randColor() {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  val = "#" + n.slice(0, 6);
+  return val;
+}
+//I make individual functions for each color, because honestly at my current level i don't know any other way.
+function bgColor() {
+  randColor();
+  root.style.setProperty("--bgcolor", val);
+}
+function textColor() {
+  randColor();
+  root.style.setProperty("--text-color", val);
+}
+function containerColor() {
+  randColor();
+  root.style.setProperty("--con-bg-color", val);
+}
+function buttonColor() {
+  randColor();
+  root.style.setProperty("--btn-bg-color", val);
+}
+function buttonTextColor() {
+  randColor();
+  root.style.setProperty("--btn-text-color", val);
+}
+//This is for the all-random button, it just runs all the functions on one button.
+function AllRandom() {
+  bgColor();
+  textColor();
+  containerColor();
+  buttonColor();
+  buttonTextColor();
+}
+//These are the eventlisteners for every button in the buttoncontainer. Again there might be smarter ways of doing this. I don't know how atm.
+bgBtn.addEventListener("click", bgColor);
+textBtn.addEventListener("click", textColor);
+conBgBtn.addEventListener("click", containerColor);
+btnBgBtn.addEventListener("click", buttonColor);
+btnTextBtn.addEventListener("click", buttonTextColor);
+allRdmBtn.addEventListener("click", AllRandom);
