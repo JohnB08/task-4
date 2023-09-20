@@ -17,11 +17,13 @@ const path2 = document.getElementById("path2");
 //Making the button that makes the two parent containers fullscreen.
 fsSwitch.addEventListener("click", (event) => {
   if (fsSwitch.checked) {
-    main1.style.width = "100vw";
+    main1.style.width = "80vw";
+    main1.style.justifyContent = "space-evenly";
     fsLabel.textContent = "No, shrink me!";
     btnContainer.style.transform = "translate(42vw, 10vh)";
   } else {
     main1.style.width = "50vw";
+    main1.style.justifyContent = "center";
     fsLabel.textContent = "Fullscreen Me!";
     btnContainer.style.transform = "translate(60vw, -90vh)";
   }

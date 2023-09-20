@@ -17,10 +17,11 @@ body {
   position: relative;
 }
 
-.main {
+#main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   flex-wrap: wrap;
   padding: 0.5em;
   gap: 1em;
@@ -33,7 +34,6 @@ body {
   justify-content: center;
   flex-basis: 15%;
   padding: 1em;
-  flex-grow: 1;
   color: var(--text-color);
   box-shadow: 0.2em 0.2em 0.3em 0.3em var(--shadow-color);
   align-items: center;
@@ -42,10 +42,10 @@ body {
 }
 #btnCont {
   color: #0d1b2a;
-  display: flex;
+  display: none;
   position: fixed;
-  top: 25%;
-  right: 20%;
+  top: 10%;
+  right: 12%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -75,7 +75,6 @@ input {
 }
 #menubtn {
   position: fixed;
-  display: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,7 +162,7 @@ input {
 
 @media only screen and (max-width: 1600px) {
   .main {
-    width: 100vw;
+    width: 80vw;
   }
   #fullscreenlabel {
     display: none;
@@ -172,15 +171,12 @@ input {
     display: inline-block;
   }
   #btnCont {
-    display: none;
     top: 10%;
-    right: 5%;
-    width: 90vw;
+    right: 0%;
+    border-radius: 0;
+    width: 100vw;
   }
   .btnconst {
     width: 70vw;
-  }
-  #menubtn {
-    display: flex;
   }
 }
