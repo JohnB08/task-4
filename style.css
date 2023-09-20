@@ -44,13 +44,11 @@ body {
   color: #0d1b2a;
   display: none;
   position: fixed;
-  opacity: 0;
   top: 12%;
   right: 12%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: nowrap;
   gap: 1em;
   width: 15%;
   padding: 1em;
@@ -167,16 +165,34 @@ input {
   #fullscreenlabel {
     display: none;
   }
+  #btnCont {
+    width: 25vw;
+  }
+  .btnconst {
+    width: 18vw;
+  }
   #fsplaceholderbtn {
     display: inline-block;
   }
+}
+@media only screen and (max-width: 800px) {
   #btnCont {
-    top: 10%;
+    top: 15%;
     right: 0%;
     border-radius: 0;
     width: 100vw;
   }
   .btnconst {
     width: 70vw;
+  }
+}
+@media only screen and (max-height: 700px) {
+  #btnCont {
+    width: 60vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #btnCont h3 {
+    margin: 0 auto;
   }
 }
