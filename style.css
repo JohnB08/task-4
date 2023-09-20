@@ -20,7 +20,6 @@ body {
 #main {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0 auto;
   flex-wrap: wrap;
   padding: 0.5em;
@@ -175,24 +174,23 @@ input {
     display: inline-block;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
   #btnCont {
-    top: 15%;
+    top: 5%;
     right: 0%;
     border-radius: 0;
     width: 100vw;
+    font-size: 0.8em;
+    gap: 0.5em;
   }
   .btnconst {
     width: 70vw;
   }
-}
-@media only screen and (max-height: 700px) {
-  #btnCont {
-    width: 60vw;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .container {
+    height: 450px;
   }
-  #btnCont h3 {
-    margin: 0 auto;
+  #menubtn {
+    width: 4.5em;
+    height: 4.5em;
   }
 }
