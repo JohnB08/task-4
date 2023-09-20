@@ -103,7 +103,6 @@ input {
 }
 #path1,
 #path2 {
-  margin: 0;
   transition: 1s;
 }
 /* I needed one container to be constant so it's allways visible (unless you fullscreen the sections) */
