@@ -33,7 +33,7 @@ body {
   justify-content: center;
   flex-basis: 15%;
   padding: 1em;
-  box-shadow: 0.1em 0.1em 0.3em 0.3em var(--shadow-color);
+  box-shadow: 0.2em 0.2em 0.3em 0.3em var(--shadow-color);
   align-items: center;
   background: var(--con-bg-color);
 }
@@ -45,10 +45,10 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 1em;
-  border: 0.5em solid black;
   width: 15%;
   padding: 1em;
-  box-shadow: 0.1em 0.1em 0.3em 0.3em #000814;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.3em 0.3em #000814;
   background: #e0e1dd;
   transition: 1s;
 }
@@ -78,7 +78,7 @@ input {
   background-color: #415a77;
   text-decoration: none;
   color: #e0e1dd;
-  width: 80%;
+  width: 12vw;
   padding: 0.5em 1em;
   font-size: 1.2em;
   font-weight: bold;
@@ -103,4 +103,22 @@ input {
   padding-bottom: 0.3em;
   padding-left: 1.3em;
   padding-top: 0.7em;
+}
+/* active effect */
+.btnconst:active {
+  filter: hue-rotate(45deg);
+  box-shadow: inset 0.5em 0.4em 0 0 #000814;
+  padding-right: 0.5em;
+  padding-bottom: 0.1em;
+  padding-left: 1.5em;
+  padding-top: 0.9em;
+}
+.btn:active,
+.container a:active {
+  filter: hue-rotate(45deg);
+  box-shadow: inset 0.5em 0.4em 0 0 var(--shadow-color);
+  padding-right: 0.5em;
+  padding-bottom: 0.1em;
+  padding-left: 1.5em;
+  padding-top: 0.9em;
 }
