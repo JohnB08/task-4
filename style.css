@@ -76,7 +76,7 @@ body {
 }
 @keyframes antennalinebob {
   0% {
-    transform: skew(-1deg, 4deg);
+    transform: skew(-1deg, 3deg);
   }
 }
 #btnCont {
