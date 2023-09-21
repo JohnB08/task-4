@@ -26,20 +26,35 @@ body {
   gap: 1em;
   transition: 0.5s;
 }
-.container {
-  display: flex;
+.container,
+#btnCont {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-basis: 15%;
   padding: 1em;
-  color: var(--text-color);
   border-radius: 1em;
+  transition: 0.5s;
+}
+.container {
+  display: flex;
+  color: var(--text-color);
   border-right: 0.5em solid var(--text-color);
   border-bottom: 0.5em solid var(--text-color);
   background: var(--con-bg-color);
-  transition: 0.5s;
 }
+#btnCont {
+  display: none;
+  position: fixed;
+  top: 12%;
+  right: 12%;
+  display: none;
+  gap: 1em;
+  color: #0d1b2a;
+  box-shadow: 0.2em 0.2em 0.3em 0.3em #0d1b2a;
+  background: #e0e1dd;
+}
+/* SVG animation */
 #Eye path,
 #Eye_2 path {
   animation: 5s ease-in-out alternate infinite Eyecolor;
@@ -79,38 +94,73 @@ body {
     transform: skew(-1deg, 3deg);
   }
 }
-#btnCont {
-  position: fixed;
-  top: 12%;
-  right: 12%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 15%;
-  gap: 1em;
-  padding: 1em;
-  border-radius: 1em;
-  color: #0d1b2a;
-  box-shadow: 0.2em 0.2em 0.3em 0.3em #0d1b2a;
-  background: #e0e1dd;
-  transition: 0.5s;
-}
+
 /* Buttons */
 input {
   display: none;
 }
 .btn,
-.container a {
+.container a,
+.btnconst {
   display: inline-block;
-  background-color: var(--btn-bg-color);
-  text-decoration: none;
-  color: var(--btn-text-color);
   padding: 0.5em 1em;
   transition: 0.5s;
   border-radius: 0.5em;
   border: none;
+  text-decoration: none;
 }
+.btn,
+.container a {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+}
+/* I needed one container to be constant so it's allways visible (unless you fullscreen the sections) */
+.btnconst {
+  background-color: #415a77;
+  color: #e0e1dd;
+  width: 12vw;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#fsplaceholderbtn {
+  display: none;
+}
+/* hover effects. */
+.btn:hover,
+.container a:hover,
+.btnconst:hover {
+  filter: hue-rotate(45deg);
+  padding-right: 0.7em;
+  padding-bottom: 0.3em;
+  padding-left: 1.3em;
+  padding-top: 0.7em;
+}
+.btn:hover,
+.container a:hover {
+  box-shadow: inset 0.3em 0.2em 0 0 var(--text-color);
+}
+.btnconst:hover {
+  box-shadow: inset 0.3em 0.2em 0 0 #000814;
+}
+/* active effect */
+.btn:active,
+.container a:active,
+.btnconst:active {
+  filter: hue-rotate(45deg);
+
+  padding-right: 0.5em;
+  padding-bottom: 0.1em;
+  padding-left: 1.5em;
+  padding-top: 0.9em;
+}
+.btn:active,
+.container a:active {
+  box-shadow: inset 0.5em 0.4em 0 0 var(--text-color);
+}
+.btnconst:active {
+  box-shadow: inset 0.5em 0.4em 0 0 #000814;
+}
+/* Amateur hamburger menu */
 #menubtn {
   position: fixed;
   top: 5%;
@@ -142,59 +192,6 @@ input {
 #path1,
 #path2 {
   transition: 1s;
-}
-/* I needed one container to be constant so it's allways visible (unless you fullscreen the sections) */
-.btnconst {
-  display: inline-block;
-  background-color: #415a77;
-  text-decoration: none;
-  color: #e0e1dd;
-  width: 12vw;
-  padding: 0.5em 1em;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: 0.5s;
-  border-radius: 0.5em;
-  border: none;
-}
-#fsplaceholderbtn {
-  display: none;
-}
-/* hover effects. */
-.btnconst:hover {
-  filter: hue-rotate(45deg);
-  box-shadow: inset 0.3em 0.2em 0 0 #000814;
-  padding-right: 0.7em;
-  padding-bottom: 0.3em;
-  padding-left: 1.3em;
-  padding-top: 0.7em;
-}
-.btn:hover,
-.container a:hover {
-  filter: hue-rotate(45deg);
-  box-shadow: inset 0.3em 0.2em 0 0 var(--text-color);
-  padding-right: 0.7em;
-  padding-bottom: 0.3em;
-  padding-left: 1.3em;
-  padding-top: 0.7em;
-}
-/* active effect */
-.btnconst:active {
-  filter: hue-rotate(45deg);
-  box-shadow: inset 0.5em 0.4em 0 0 #000814;
-  padding-right: 0.5em;
-  padding-bottom: 0.1em;
-  padding-left: 1.5em;
-  padding-top: 0.9em;
-}
-.btn:active,
-.container a:active {
-  filter: hue-rotate(45deg);
-  box-shadow: inset 0.5em 0.4em 0 0 var(--text-color);
-  padding-right: 0.5em;
-  padding-bottom: 0.1em;
-  padding-left: 1.5em;
-  padding-top: 0.9em;
 }
 
 @media only screen and (max-width: 1600px) {
