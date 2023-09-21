@@ -1,6 +1,6 @@
 //fetching all the things I need to manipulate the page
 const root = document.documentElement;
-const main1 = document.getElementById("main");
+const fsContainer = document.getElementById("fullscreencontainer");
 const btnContainer = document.getElementById("btnCont");
 const fsSwitch = document.getElementById("fullScreen");
 const fsLabel = document.getElementById("fullscreenlabel");
@@ -22,13 +22,14 @@ const path1 = document.getElementById("path1");
 const path2 = document.getElementById("path2");
 //Making the button that makes the two parent containers fullscreen.
 fsSwitch.addEventListener("click", (event) => {
-  if (fsSwitch.checked) {
-    main1.style.width = "80vw";
-    main1.style.justifyContent = "space-evenly";
+  if (fsSwitch.checked && window.innerWidth > 1600) {
+    fsContainer.style.position = "fixed";
+    fsContainer.style.top = "5%";
+    fsContainer.style.right = "10%";
+    fsContainer.style.width = "80vw";
     fsLabel.textContent = "No, shrink me!";
   } else {
-    main1.style.width = "50vw";
-    main1.style.justifyContent = "center";
+    fsContainer.style.position = "static";
     fsLabel.textContent = "Fullscreen Me!";
   }
 });

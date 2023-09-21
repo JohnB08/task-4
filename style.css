@@ -172,7 +172,7 @@ input {
 .btn:hover,
 .container a:hover {
   filter: hue-rotate(45deg);
-  box-shadow: inset 0.3em 0.2em 0 0 var(--shadow-color);
+  box-shadow: inset 0.3em 0.2em 0 0 var(--text-color);
   padding-right: 0.7em;
   padding-bottom: 0.3em;
   padding-left: 1.3em;
@@ -190,7 +190,7 @@ input {
 .btn:active,
 .container a:active {
   filter: hue-rotate(45deg);
-  box-shadow: inset 0.5em 0.4em 0 0 var(--shadow-color);
+  box-shadow: inset 0.5em 0.4em 0 0 var(--text-color);
   padding-right: 0.5em;
   padding-bottom: 0.1em;
   padding-left: 1.5em;
@@ -200,6 +200,9 @@ input {
 @media only screen and (max-width: 1600px) {
   .main {
     width: 80vw;
+  }
+  #fullscreencontainer {
+    position: static;
   }
   #fullscreenlabel {
     display: none;
