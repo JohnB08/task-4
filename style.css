@@ -40,6 +40,45 @@ body {
   background: var(--con-bg-color);
   transition: 0.5s;
 }
+#Eye path,
+#Eye_2 path {
+  animation: 5s ease-in-out alternate infinite Eyecolor;
+}
+@keyframes Eyecolor {
+  0% {
+    fill: var(--text-color);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+}
+#mainmouth {
+  animation: 5s ease-in-out alternate infinite Mouthcolor;
+}
+@keyframes Mouthcolor {
+  0% {
+    fill: var(--con-bg-color);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+}
+#Antenna {
+  animation: 3s ease-in-out alternate infinite antennabob;
+}
+@keyframes antennabob {
+  0% {
+    transform: translate(2px, 8px);
+  }
+}
+#Antennaline {
+  animation: 3s ease-in-out alternate infinite antennalinebob;
+}
+@keyframes antennalinebob {
+  0% {
+    transform: skew(-1deg, 4deg);
+  }
+}
 #btnCont {
   position: fixed;
   top: 12%;
@@ -83,22 +122,22 @@ input {
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  border-right: 0.4em solid #0d1b2a;
-  border-bottom: 0.4em solid #0d1b2a;
+  border-right: 0.3em solid #0d1b2a;
+  border-bottom: 0.3em solid #0d1b2a;
   background: #e0e1dd;
   border-radius: 50%;
   transition: 0.5s;
 }
 #menubtn:hover,
 #menubtn:focus {
-  transform: translate(0.1em, 0.1em);
-  border-right: 0.3em solid #0d1b2a;
-  border-bottom: 0.3em solid #0d1b2a;
+  transform: translate(0.2em, 0.2em);
+  border-right: 0.1em solid #0d1b2a;
+  border-bottom: 0.1em solid #0d1b2a;
 }
 #menubtn:active {
   transform: translate(0.3em, 0.3em);
-  border-right: 0.1em solid #0d1b2a;
-  border-bottom: 0.1em solid #0d1b2a;
+  border-right: none;
+  border-bottom: none;
 }
 #path1,
 #path2 {
