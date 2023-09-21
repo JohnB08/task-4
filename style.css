@@ -12,19 +12,33 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: var(--bgcolor);
-  transition: 0.5s;
   position: relative;
 }
+body,
+#main,
+.container,
+#btnCont {
+  transition: 0.5s;
+}
 
-#main {
-  display: flex;
+#main,
+#btnCont,
+.container {
   justify-content: center;
+  padding: 1em;
+}
+#main,
+.container {
+  display: flex;
+}
+#main,
+#btnCont {
+  gap: 1em;
+}
+#main {
   margin: 0 auto;
   flex-wrap: wrap;
   width: 50vw;
-  padding: 0.5em;
-  gap: 1em;
-  transition: 0.5s;
 }
 .container,
 #btnCont {
@@ -32,12 +46,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-basis: 15%;
-  padding: 1em;
   border-radius: 1em;
-  transition: 0.5s;
 }
 .container {
-  display: flex;
   color: var(--text-color);
   border-right: 0.5em solid var(--text-color);
   border-bottom: 0.5em solid var(--text-color);
@@ -48,7 +59,6 @@ body {
   position: fixed;
   top: 12%;
   right: 12%;
-  gap: 1em;
   color: #0d1b2a;
   box-shadow: 0.2em 0.2em 0.3em 0.3em #0d1b2a;
   background: #e0e1dd;
@@ -119,9 +129,6 @@ input {
   font-size: 1.2em;
   font-weight: bold;
 }
-#fsplaceholderbtn {
-  display: none;
-}
 /* hover effects. */
 .container a:hover,
 .btnconst:hover {
@@ -138,7 +145,6 @@ input {
   box-shadow: inset 0.3em 0.2em 0 0 #000814;
 }
 /* active effect */
-.btn:active,
 .container a:active,
 .btnconst:active {
   filter: hue-rotate(45deg);
@@ -161,11 +167,13 @@ input {
   right: 10%;
   width: 6em;
   height: 6em;
+  /* Not sure about flex here, see below. */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  /* Tried several ways to stack these images the way I wanted, so it would be easy to animate. This was the best I could come up with. */
   border-right: 0.3em solid #0d1b2a;
   border-bottom: 0.3em solid #0d1b2a;
   background: #e0e1dd;
