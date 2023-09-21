@@ -198,7 +198,7 @@ input {
 
 @media only screen and (max-width: 1600px) {
   .main {
-    width: 80vw;
+    width: 90vw;
   }
   #fullscreencontainer {
     position: static;
@@ -227,9 +227,6 @@ input {
   }
   .btnconst {
     width: 70vw;
-  }
-  .container {
-    height: 450px;
   }
   #menubtn {
     width: 4.5em;
