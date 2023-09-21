@@ -98,7 +98,6 @@ body {
 input {
   display: none;
 }
-.btn,
 .container a,
 .btnconst {
   display: inline-block;
@@ -108,7 +107,6 @@ input {
   border: none;
   text-decoration: none;
 }
-.btn,
 .container a {
   background-color: var(--btn-bg-color);
   color: var(--btn-text-color);
@@ -125,7 +123,6 @@ input {
   display: none;
 }
 /* hover effects. */
-.btn:hover,
 .container a:hover,
 .btnconst:hover {
   filter: hue-rotate(45deg);
@@ -134,7 +131,6 @@ input {
   padding-left: 1.3em;
   padding-top: 0.7em;
 }
-.btn:hover,
 .container a:hover {
   box-shadow: inset 0.3em 0.2em 0 0 var(--text-color);
 }
@@ -152,7 +148,6 @@ input {
   padding-left: 1.5em;
   padding-top: 0.9em;
 }
-.btn:active,
 .container a:active {
   box-shadow: inset 0.5em 0.4em 0 0 var(--text-color);
 }
