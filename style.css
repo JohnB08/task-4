@@ -48,7 +48,6 @@ body {
   position: fixed;
   top: 12%;
   right: 12%;
-  display: none;
   gap: 1em;
   color: #0d1b2a;
   box-shadow: 0.2em 0.2em 0.3em 0.3em #0d1b2a;
