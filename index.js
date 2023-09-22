@@ -20,9 +20,12 @@ const path2 = document.getElementById("path2");
 //Making the button that makes the two parent containers fullscreen.
 //hexcode generator
 function randColor() {
-  let n = (Math.random() * 0xfffff * 1000000).toString(16);
-  val = "#" + n.slice(0, 6);
+  // let n = (Math.random() * 0xfffffffff).toString(16);
+  let n = (Math.random() * (33554431 - 16777215) + 16777215).toString(16);
+  console.log(n);
+  val = "#" + n.slice(1, 7);
   itWorks.textContent = "It Works!";
+  console.log(val);
   return val;
 }
 //I make individual functions for each color, because honestly at my current level i don't know any other way.
